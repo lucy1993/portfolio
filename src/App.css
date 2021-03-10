@@ -2,6 +2,7 @@
 
 body {
   font-family: "eurostile", sans-serif;
+  background-color: #edf2f8;
 }
 
 h1, h2, h3, h4, h5 ,h6, p, li, u {
@@ -34,20 +35,23 @@ a {
   letter-spacing: 2px;
 }
 
+.profile-wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+}
+
 .profile-img {
   width: 55%;
   min-width: 600px;
   margin: 0 auto;
-  position: absolute;
-  bottom: -5px;
-  left: 24%;
 }
 
 .main-app {
   letter-spacing: 1px;
   background-color: #edf2f8;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -411,6 +415,9 @@ a {
   animation-fill-mode: forwards;
 }
 
+.exp-box{
+  background-color: #fff;
+}
 /* animation */
 
 @keyframes animTop {
@@ -444,11 +451,12 @@ a {
 
 .exp-box p {
   padding: 30px 17px;
-  font-size: 14px;
+  font-size: 18px;
   color: #a0a2a5;
+  width: 280px;
   text-align: left;
   letter-spacing: 0;
-  line-height: 19px;
+  line-height: 30px;
 }
 
 .exp-box-image {
@@ -470,23 +478,43 @@ a {
   position: absolute;
   left: 20px;
   top: 10%;
+  cursor: pointer;
 }
 
-.mid-mid-right{
+.mid-mid-left:hover .katu:after {
+  content: 'Katù';
+  cursor: pointer;
+  position: absolute;
+  left: 35%;
+}
+
+.mid-mid-right {
   position: absolute;
   right: 10px;
   bottom: 10%;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.mid-mid-right:hover .banik:before {
+  content: 'Bane';
+  cursor: pointer;
+  position: absolute;
+  left: 35%;
+  top: -20px;
 }
 
 .tec-text {
   width: 30%;
   height: 400px;
   position: absolute;
-  right: 20px;
+  right: 60px;
   top: 100px;
+  font-size: 18px;
   text-align: left;
-  line-height: 30px;
-  color: #141c3a;
+  line-height: 40px;
+  color: #a0a2a5;
+  
 }
 
 .about-intro h3 {
@@ -667,6 +695,42 @@ a {
   letter-spacing: 2px;
 }
 
+.company-row {
+  display: flex;
+  align-items: center;
+}
+
+.company-row h4 {
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 30px;
+  color: #737373;
+}
+
+.company-row p {
+  padding: 30px 17px;
+  font-size: 18px;
+  color: #a0a2a5;
+  width: 280px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 20px;
+  padding-top: 5px;
+}
+
+.image-overflow {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.image-overflow img {
+  width: 50px;
+}
+
 @-webkit-keyframes swipeSides {}
 @-moz-keyframes swipeSides {}
 @-o-keyframes swipeSides {}
@@ -697,10 +761,6 @@ a {
 
   .main-app {
     overflow: hidden;
-  }
-  .profile-img {
-    bottom: -15px;
-    left: 0;
   }
 
   .big-svg {

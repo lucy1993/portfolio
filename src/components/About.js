@@ -3,26 +3,87 @@ import { useEffect, useState } from 'react';
 import alibaba from '../images/baba.jpeg';
 import br from '../images/br.jpeg';
 
-
+import code from '../images/code.PNG';
+import exp from '../images/exp.PNG';
+import resp from '../images/resp.PNG';
+import chall from '../images/chall.PNG';
 
 
 const About = () => {
+  const [imgExp, setImgExp] = useState([code, exp, resp, chall]);
+
   const [experience, setExperience] = useState([
     {
       title: 'Brooktec ',
       date: '2019 - 2020',
       icon: br,
-      text: `Brooktec is development agency with multiple projects varying from apps for banks to e-commerce shops as well as programming languages such as React, Angular, Node.js , Ionic, React Native. The biggest challenge in Brooktec was kipping up with all the technologies,  giving fast and solid solutions to problems. Being able to architect or jump in to the new project, or be in couple of projects simultaneously. `
+      teamColor: 'rgba(66, 53, 64, 0.5)',
+      text: [
+        {
+          title: 'Company',
+          text: 'Brooktec is development agency with multiple projects varying from apps for banks to e-commerce shops',
+        },
+        {
+          title: 'Technologies',
+          text: 'React, Angular, Node.js , Ionic, React Native, React, Angular, Node.js , Ionic, React Native',
+        },
+        {
+          title: 'Challenges',
+          text: 'The biggest challenge in Brooktec was kipping up with all the technologies, giving fast and solid solutions to problems.',
+        },
+        {
+          title: 'Responsibilities',
+          text: 'Being able to architect or jump in to the new project, or be in couple of projects simultaneously.',
+        },
+      ]
+
     },{
       title: 'Alibaba',
       date: '2016 - 2019',
       icon: alibaba,
-      text: 'Alibaba is one of the biggest e-comers platforms in the world. Working as a Front-end developer with React.js  my main responsibility was building fast and clean code, being a problem solver as well as keeping up to date with the newest technologies and updates. The biggest challenge was the responsibility to provide bug-less solutions to millions of people worldwide.  '
+      teamColor: 'rgba(255, 100, 1, 0.5)',
+      text: [
+        {
+          title: 'Company',
+          text: 'Alibaba is one of the biggest e-comers platforms in the world with millions of active users.',
+        },
+        {
+          title: 'Technologies',
+          text: 'React, React Native, Redux Olimpics',
+        },
+        {
+          title: 'Challenges',
+          text: 'Working as a Front-end developer with React.js my main responsibility was building fast and clean code, being a problem solver as well as keeping up to date with the newest technologies and updates',
+        },
+        {
+          title: 'Responsibilities',
+          text: ' The biggest challenge was the responsibility to provide bug-less solutions to millions of people worldwide'
+        },
+      ]
     },{
       title: 'Freelance',
       date: '2015 - 2016',
       icon: null,
-      text: 'I have started my journey as a freelancer, building light and interactive portfolio pages, using interesting styling solutions and animations.'
+      teamColor: '#eee',
+      text: [
+        {
+          title: 'Company',
+          text: 'Brooktec is development agency with multiple projects varying from apps for banks to e-commerce shops',
+        },
+        {
+          title: 'Technologies',
+          text: 'React, Angular, Node.js , Ionic, React Native, React, Angular, Node.js , Ionic, React Native',
+        },
+        {
+          title: 'Challenges',
+          text: 'The biggest challenge in Brooktec was kipping up with all the technologies, giving fast and solid solutions to problems.',
+        },
+        {
+          title: 'Responsibilities',
+          text: 'Being able to architect or jump in to the new project, or be in couple of projects simultaneously.',
+        },
+      ]
+      // text: 'I have started my journey as a freelancer, building light and interactive portfolio pages, using interesting styling solutions and animations.'
     }
   ])
   return (
@@ -38,7 +99,22 @@ const About = () => {
           </div>
           <h4> {box.title}</h4>
           <h6> {box.date} </h6>
-          <p> {box.text} </p>
+          {box.text && box.text.map((textElm, index) => {
+            return (<div className='company-row'>
+              <div className='company-image'>
+                <div 
+                  className='image-overflow'
+                  style={{ backgroundColor: box.teamColor}}
+                >
+                  <img src={imgExp[index]} width='100%'/>
+                </div>
+              </div>
+              <div>
+                <h4> {textElm.title} </h4>
+                <p> {textElm.text} </p>
+              </div>
+            </div>)
+          })}
           </div>
         )}
       </div>

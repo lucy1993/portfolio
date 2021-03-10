@@ -81,7 +81,7 @@ function App() {
               </Switch>
               <div className='social-media'>
                 {socialMedia && socialMedia.map(social => 
-                <a href={social.link} key={uuidv4()}>
+                <a href={social.link} key={uuidv4()}  target="_blank">
                   <div className={`circle ${social.color} circle-icon`}>
                     <i className={`${social.icon}`}></i>
                   </div>

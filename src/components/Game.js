@@ -208,7 +208,7 @@ function Game() {
     <div 
       className="game"
       ref={initPageRef}
-      {...ArrowKeysReact.events} tabIndex="1"
+      {...ArrowKeysReact.events} tabIndex="2"
     >
       <div className='big-box-game'>
         <div className='box-game-header'>

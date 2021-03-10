@@ -31,9 +31,11 @@ function Hola() {
       <div className='circle-mid pink bottom-right circle'></div>
       <div className='circle-big mid-mid-right animate__fadeIn animate__animated'>
         <img src={banik} width='100%'/>
+        <div className='banik'></div>
       </div>
       <div className='circle-big mid-mid-left animate__fadeIn animate__animated'>
         <img src={katu} width='100%'/>
+        <div className='katu'></div>
       </div>
       <div className='circle-inner circle-mid top-right'>
         <div className='circle-mid  black circle animate__fadeIn animate__animated'>
@@ -48,8 +50,10 @@ function Hola() {
         <p>code architecture</p>
       </div>
       <div className="main-circle circle"></div>
-      <div className="profile-img animate__fadeIn animate__animated">
-        <img src={portImg} className="App-logo" alt="logo" width='100%'/>
+      <div className='profile-wrapper'>
+        <div className="profile-img animate__fadeIn animate__animated">
+          <img src={portImg} className="App-logo" alt="logo" width='100%'/>
+        </div>
       </div>
     </div>
   );

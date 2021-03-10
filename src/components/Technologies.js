@@ -13,6 +13,7 @@ import ionic from '../images/ionic.png';
 import sass from '../images/sass.png';
 import git from '../images/git.png';
 
+
 const Technologies = () => {
   const [tec, setTec] = useState([
     {
@@ -52,7 +53,7 @@ const Technologies = () => {
       title: 'Ionic',
       color: '#b7fee4',
       icon: ionic,
-      text: 'Being React person Ionic makes me love Angular\'s two way binding and Typescript more and more.',
+      text: 'Being React person Ionic makes me love Angular\'s two way data binding and Typescript more and more.',
       x: '17px',
       y: '255px'
     },
@@ -111,7 +112,7 @@ const Technologies = () => {
       text: `I started my office coding experience with React in Alibaba.
       Learning from the bests, with best practices and architecture solutions 
       React became the framework that makes me feel powerful to solve 
-      any problem, optimize and reuse code, architect huge platforms.`,
+      any problem, optimize and reuse code, architect big platforms.`,
       x: '383px',
       y: '289px'
     },
