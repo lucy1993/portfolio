@@ -25,15 +25,15 @@ const About = () => {
         },
         {
           title: 'Technologies',
-          text: 'React, Angular, Node.js , Ionic, React Native, React, Angular, Node.js , Ionic, React Native',
+          text: ['React', 'React Native', 'Redux', 'Flux', 'Node.js', 'Express','Ionic','Angular'],
         },
         {
           title: 'Challenges',
-          text: 'The biggest challenge in Brooktec was kipping up with all the technologies, giving fast and solid solutions to problems.',
+          text: 'The biggest challenge in Brooktec was kipping up with all the technologies, giving fast and solid solutions to problems',
         },
         {
           title: 'Responsibilities',
-          text: 'Being able to architect or jump in to the new project, or be in couple of projects simultaneously.',
+          text: 'Being able land in to a new project, understand and architect the logic, maintain several projects simultaneously.',
         },
       ]
 
@@ -49,16 +49,16 @@ const About = () => {
         },
         {
           title: 'Technologies',
-          text: 'React, React Native, Redux Olimpics',
+          text: ['React', 'React Native', 'Redux', 'Mapbox', 'Olimpics'],
         },
         {
           title: 'Challenges',
-          text: 'Working as a Front-end developer with React.js my main responsibility was building fast and clean code, being a problem solver as well as keeping up to date with the newest technologies and updates',
+          text: ' The biggest challenge was the responsibility to provide bug-less solutions to millions of users worldwide'
         },
         {
           title: 'Responsibilities',
-          text: ' The biggest challenge was the responsibility to provide bug-less solutions to millions of people worldwide'
-        },
+          text: 'Working as a Front-end developer with React.js my main responsibility was building fast and clean code, being a problem solver as well as keeping up to date with the newest technologies and updates',
+       },
       ]
     },{
       title: 'Freelance',
@@ -67,23 +67,18 @@ const About = () => {
       teamColor: '#eee',
       text: [
         {
-          title: 'Company',
-          text: 'Brooktec is development agency with multiple projects varying from apps for banks to e-commerce shops',
+          title: '',
+          text: 'I have started my journey as a freelancer, building light and interactive portfolio pages',
         },
         {
           title: 'Technologies',
-          text: 'React, Angular, Node.js , Ionic, React Native, React, Angular, Node.js , Ionic, React Native',
-        },
-        {
-          title: 'Challenges',
-          text: 'The biggest challenge in Brooktec was kipping up with all the technologies, giving fast and solid solutions to problems.',
+          text: ['jQuery', 'CSS3', 'Keyframes', 'Sass/Less', 'Vanilla Js'],
         },
         {
           title: 'Responsibilities',
-          text: 'Being able to architect or jump in to the new project, or be in couple of projects simultaneously.',
+          text: 'Solving the UX using interesting styling solutions and animations',
         },
       ]
-      // text: 'I have started my journey as a freelancer, building light and interactive portfolio pages, using interesting styling solutions and animations.'
     }
   ])
   return (
@@ -111,7 +106,8 @@ const About = () => {
               </div>
               <div>
                 <h4> {textElm.title} </h4>
-                <p> {textElm.text} </p>
+                <p> {typeof textElm.text === 'string' ? textElm.text 
+                : textElm.text.map(codeText => <code className='tec-code'> {codeText} </code>)} </p>
               </div>
             </div>)
           })}

@@ -479,6 +479,8 @@ a {
   left: 20px;
   top: 10%;
   cursor: pointer;
+  z-index: 99;
+  transition: all 0.5s ease-in-out;
 }
 
 .mid-mid-left:hover .katu:after {
@@ -494,6 +496,7 @@ a {
   bottom: 10%;
   z-index: 9;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 .mid-mid-right:hover .banik:before {
@@ -502,6 +505,7 @@ a {
   position: absolute;
   left: 35%;
   top: -20px;
+  z-index: 99;
 }
 
 .tec-text {
@@ -682,6 +686,12 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.tec-code {
+  background-color: #f0f0f0;
+  margin: 5px;
+  line-height: 30px;
+}
+
 .message-text {
   color: #fff;
   letter-spacing: 2px;
@@ -728,7 +738,7 @@ a {
 }
 
 .image-overflow img {
-  width: 50px;
+  width: 40px;
 }
 
 @-webkit-keyframes swipeSides {}

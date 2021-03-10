@@ -62,7 +62,7 @@ const Technologies = () => {
       title: 'Angular',
       color: '#4ceab1',
       icon: angular,
-      text: 'Well Angular is cool, but react is cooler, lets discussed it over a coffee :) ',
+      text: 'Well Angular is cool, but React is cooler, lets discussed it over a coffee :) ',
       x: '55px',
       y: '316px'
     },

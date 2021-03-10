@@ -19,7 +19,7 @@ function Navigation() {
       {allTabs && allTabs.map(tab => <li key={uuidv4()} className={`nav-li ${tab}`}>
         <Link to={`/portfolio/${tab}`}
         onClick={() => handleClick(tab)}
-        className={activeTab === 'portfolio/'+tab || (activeTab === 'portfolio' && tab === 'hola') ? 'active' : ''}
+        className={activeTab === 'portfolio/'+tab || (activeTab === 'portfolio/' && tab === 'hola') ? 'active' : ''}
         >
           {tab}
         </Link>
