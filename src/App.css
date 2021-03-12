@@ -91,12 +91,13 @@ a {
 .tec-info-text  {
   color: #9a9c9e;
   text-align: center;
+  margin-top: 50px;
 }
 
 .main-navigation > li > a {
   text-decoration: none;
   color: #9a9c9e;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .main-header {
@@ -325,7 +326,7 @@ a {
   height: 5px;
   border-radius: 50%;
   position: absolute;
-  top: -5px;
+  bottom: -10px;
   left: 45%;
 }
 
@@ -343,7 +344,7 @@ a {
   border-radius: 50%;
   width: 500px;
   height: 450px;
-  top: -55px;
+  top: 20px;
   position: relative;
   /* box-shadow: 50px 60px 20px -20px rgb(0 0 0 / 27%) */
 }
@@ -390,25 +391,29 @@ a {
 .experience-wrapper {
   width: 80%;
   min-height: 400px;
-  background-color: #fff;
   border-radius: 10px 10px 0 0;
   display: flex;
   margin: 0 auto;
   margin-top: -150px;
-  border: 1px solid #eee;
 }
 
 .experience-wrapper > div {
+  width: 33%;
   border-right: 1px solid #eee;
   border-left: 1px solid #eee;
-
+}
+.exp-box:nth-child(1 ){
+  border-radius: 8px 0 0 8px;
+}
+.exp-box:nth-child(3 ){
+  border-radius:  0 8px 8px 0;
 }
 
-.exp-box:nth-child(2){
+.exp-box:nth-child(2) {
   position: relative;
   top: 0;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius:  8px 8px 0 0;
   animation: animTop;
   animation-duration: 0.3s;
   border: none !important;
@@ -417,6 +422,7 @@ a {
 
 .exp-box{
   background-color: #fff;
+  padding: 10px;
 }
 /* animation */
 
@@ -453,7 +459,7 @@ a {
   padding: 30px 17px;
   font-size: 18px;
   color: #a0a2a5;
-  width: 280px;
+  /* width: 280px; */
   text-align: left;
   letter-spacing: 0;
   line-height: 30px;
@@ -462,7 +468,7 @@ a {
 .exp-box-image {
   width: 75px;
   height: 40px;
-  margin: 0 auto;
+  margin: 8px auto 0;
   overflow: hidden;
   position: relative;
   border-radius: 8px;
@@ -718,14 +724,14 @@ a {
 }
 
 .company-row p {
-  padding: 30px 17px;
-  font-size: 18px;
+  /* padding: 30px 17px;
+  font-size: 15px;
   color: #a0a2a5;
   width: 280px;
   text-align: left;
   letter-spacing: 0;
   line-height: 20px;
-  padding-top: 5px;
+  padding-top: 5px; */
 }
 
 .image-overflow {
@@ -757,11 +763,32 @@ a {
   animation:         swipeSides 0.3s; /* IE 10+, Fx 29+ */
 }
 
-/* mobile */
 
+/* mid */
+@media screen and (min-device-width : 480px) and (max-device-width : 800px) {
+  .experience-wrapper {
+    flex-wrap: wrap;
+  }
+  .experience-wrapper > div {
+    width: 100%;
+  }
+  .exp-box:nth-child(2) {
+    animation: none !important;
+  }
+}
+
+/* mobile */
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .contact-me-btn, .tec-info-text, .play {
     display: none;
+  }
+
+  .experience-wrapper > div {
+    width: 100%;
+  }
+
+  .exp-box:nth-child(2) {
+    animation: none !important;
   }
 
   .main-circle {

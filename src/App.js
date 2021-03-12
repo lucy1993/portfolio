@@ -48,7 +48,7 @@ function App() {
           <Router>
             <div className='app-navigation'>
               <Navigation />
-              <a href="mailto:lyusibaghagyulyan@gmail.com">
+              <a href="mailto:lyusibaghdagyulyan@gmail.com">
                 <div className='contact-me-btn'>
                 Contact Me
                 </div>

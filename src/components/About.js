@@ -21,7 +21,7 @@ const About = () => {
       text: [
         {
           title: 'Company',
-          text: 'Brooktec is development agency with multiple projects varying from apps for banks to e-commerce shops',
+          text: 'Brooktec is a development agency with multiple projects varying from apps for banks to e-commerce shops',
         },
         {
           title: 'Technologies',
@@ -29,11 +29,11 @@ const About = () => {
         },
         {
           title: 'Challenges',
-          text: 'The biggest challenge in Brooktec was kipping up with all the technologies, giving fast and solid solutions to problems',
+          text: 'The biggest challenge in Brooktec was keeping up with all the technologies, giving fast and solid solutions to the problems',
         },
         {
           title: 'Responsibilities',
-          text: 'Being able land in to a new project, understand and architect the logic, maintain several projects simultaneously.',
+          text: 'Being able to land into a new project, to understand and to architect the logic, maintaining several projects simultaneously',
         },
       ]
 
@@ -45,7 +45,7 @@ const About = () => {
       text: [
         {
           title: 'Company',
-          text: 'Alibaba is one of the biggest e-comers platforms in the world with millions of active users.',
+          text: 'Alibaba is one of the biggest e-comers platforms in the world with millions of active users',
         },
         {
           title: 'Technologies',
@@ -76,7 +76,7 @@ const About = () => {
         },
         {
           title: 'Responsibilities',
-          text: 'Solving the UX using interesting styling solutions and animations',
+          text: 'Solving user interaction challenges using interesting styling solutions and animations',
         },
       ]
     }
