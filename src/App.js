@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 // anv
 import { v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from 'react';
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className="main-app">
-          <Router>
+          <HashRouter>
             <div className='app-navigation'>
               <Navigation />
               <a href="mailto:lyusibaghdagyulyan@gmail.com">
@@ -93,7 +93,7 @@ function App() {
                 <div> © 2021 Lyusi </div>
                 <div> all rights reserved </div>
               </div>
-            </Router>
+            </HashRouter>
       </div>
   );
 }
