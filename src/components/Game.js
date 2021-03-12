@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import ArrowKeysReact from 'arrow-keys-react';
+import { v4 as uuidv4 } from 'uuid';
 
 const classedNumb = {
   2: 'two',
@@ -268,6 +269,7 @@ function Game() {
                 rowAnimDir = 4-indexRow
               }
               return <div
+              key={uuidv4()}
               className={`row`} > {
               row.map((col, indexCol) => {
                 if(keyState === 'right') {

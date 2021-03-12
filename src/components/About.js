@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 // images
 import alibaba from '../images/baba.jpeg';
 import br from '../images/br.jpeg';
@@ -88,7 +89,9 @@ const About = () => {
       </div>
       <div className='experience-wrapper'>
         {experience && experience.map(box => 
-        <div className='exp-box animate__slideInUp animate__animated'>
+        <div 
+          key={uuidv4()}
+          className='exp-box animate__slideInUp animate__animated'>
           <div className='exp-box-image'>
             <img src={box.icon} width='100%' />
           </div>
